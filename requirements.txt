@@ -8,3 +8,5 @@ Pillow==9.2.0
 numpy==1.23.2
 libclang==16.0.0
 opencv-python-headless==4.5.4.60
+sklearn==0.0
+keras==2.12.0
