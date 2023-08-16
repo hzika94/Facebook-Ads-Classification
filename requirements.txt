@@ -285,6 +285,5 @@ xlrd==2.0.1
 yarg==0.1.9
 youtube-dl==2021.12.17
 zipp==3.10.0
-pypiwin32
 tensorflow-intel
 
