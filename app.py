@@ -10,6 +10,14 @@ import pickle
 def load_model():
     file = open('AdsClassificationModel.pkl', 'rb')
     model = pickle.load(file)
+    image = Image.open('10000000_303749348833111_2436487150534607562_n.jpg')
+    image = image.resize((224, 224))
+    print(image)
+    image = np.array(image) / 255.0
+    image = np.expand_dims(image, axis=0)  # Add batch dimension
+    # Pass the image through the model
+    pred = loaded_model.predict(image)
+    st.write(pred)
     return model
 with st.spinner('Model is being loaded..'):
   model=load_model()
