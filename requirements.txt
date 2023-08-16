@@ -1,5 +1,5 @@
 streamlit==1.14.1
-keras==2.13.1
+keras
 tensorflow==2.13.0
 tensorflow-estimator==2.13.0
 tensorflow-hub==0.13.0
