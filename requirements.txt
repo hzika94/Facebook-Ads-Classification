@@ -285,8 +285,8 @@ xlrd==2.0.1
 yarg==0.1.9
 youtube-dl==2021.12.17
 zipp==3.10.0
-pywin32
-pywin32-ctypes
-pywinpty
+pypiwin32
+pypiwin32-ctypes
+pypiwinpty
 tensorflow-intel
 
