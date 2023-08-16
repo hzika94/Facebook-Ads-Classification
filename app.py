@@ -4,15 +4,24 @@ import streamlit as st
 # from tensorflow.keras.models import load_model
 import pickle
 
-
-
-@st.cache(allow_output_mutation=True)
+import urllib.request
+@st.experimental_singleton
 def load_model():
-    file = open('AdsClassificationModel.pkl', 'rb')
-    model = pickle.load(file)
-    return model
-with st.spinner('Model is being loaded..'):
-  model=load_model()
+    if not os.path.isfile('model.pkl'):
+        urllib.request.urlretrieve('https://github.com/hzika94/Facebook-Ads-Classification/blob/main/AdsClassificationModel.pkl', 'model.pkl')
+        file = open('model.pkl', 'rb')
+        model = pickle.load(file)
+    return model 
+
+
+
+# @st.cache(allow_output_mutation=True)
+# def load_model():
+#     file = open('AdsClassificationModel.pkl', 'rb')
+#     model = pickle.load(file)
+#     return model
+# with st.spinner('Model is being loaded..'):
+#   model=load_model()
 
 st.write("""
          # Facebook Ads Classification
@@ -25,6 +34,7 @@ from PIL import Image, ImageOps
 import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 class_labels = ['Success', 'Fail']  # Classes names
+
 def import_and_predict(image_data, model):
     
         size = (224,224)    
