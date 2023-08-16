@@ -20,6 +20,7 @@ statsmodels==0.13.0
 streamlit_bokeh_events
 scikit-learn==1.0.2
 cachetools==5.2.0
+pickleshare==0.7.5
 
 
 
