@@ -6,7 +6,7 @@ import pickle
 
 
 
-@st.cache(persist=True)
+@st.cache_data
 def load_model():
     file = open('AdsClassificationModel.pkl', 'rb')
     model = pickle.load(file)
