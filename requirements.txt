@@ -6,7 +6,7 @@ tensorflow-hub==0.13.0
 tensorflow-io-gcs-filesystem==0.31.0
 pandas==1.4.4
 Pillow==9.2.0
-numpy== 1.23.5
+numpy
 libclang==16.0.0
 opencv-python-headless==4.5.4.60
 opencv-python==4.7.0.72
