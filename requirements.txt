@@ -276,7 +276,7 @@ webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.5.1
 Werkzeug==2.3.7
-widgetsnbextension==4.0.3
+widgetsnbextension
 wincertstore==0.2
 wrapt==1.14.1
 wsproto==1.2.0
